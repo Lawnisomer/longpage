@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <!-- Transparent content cutouts also work when the system tints the monochrome layer. -->
+    <path android:fillColor="#FFFFFF" android:fillType="evenOdd"
+        android:pathData="M44,26 H64 Q68,26 68,30 V78 Q68,82 64,82 H44 Q40,82 40,78 V30 Q40,26 44,26 Z M46,43 H62 V46 H46 Z M46,53 H62 V56 H46 Z" />
+    <path android:fillColor="#00000000" android:strokeColor="#FFFFFF"
+        android:strokeWidth="2.5" android:strokeLineCap="round" android:strokeLineJoin="round"
+        android:pathData="M32,42 V33 H36 M72,33 H76 V42 M32,66 V75 H36 M72,75 H76 V66" />
+</vector>

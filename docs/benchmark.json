@@ -1,0 +1,110 @@
+{
+  "scope": "Same Redmi K70E, same synthetic numbered page, same region and matching/export logic. Baseline replays the earlier timing and gesture parameters in an instrumented debug build. Short tests only.",
+  "baseline_parameters": {
+    "drag_fraction": 0.34,
+    "drag_ms": 800,
+    "hold_ms": 220,
+    "settle_ms": 450,
+    "tail": "zero-length hold"
+  },
+  "optimized_parameters": {
+    "drag_fraction": 0.6,
+    "drag_ms": 450,
+    "hold_ms": 180,
+    "settle_ms": 140,
+    "tail": "1px slow tail emits movement events"
+  },
+  "baseline": {
+    "measured_scroll_cycles": 9,
+    "median": {
+      "frame_ms": 3259,
+      "gesture_ms": 1039,
+      "stable_ms": 2080,
+      "match_ms": 40,
+      "save_ms": 85,
+      "advance_px": 1202
+    },
+    "new_pixels_per_second": 368.98
+  },
+  "optimized": {
+    "measured_scroll_cycles": 11,
+    "median": {
+      "frame_ms": 1545,
+      "gesture_ms": 654,
+      "stable_ms": 751,
+      "match_ms": 41,
+      "save_ms": 97,
+      "advance_px": 1385
+    },
+    "new_pixels_per_second": 897.92
+  },
+  "throughput_ratio": 2.434,
+  "time_reduction_for_equal_new_height_percent": 58.9,
+  "baseline_export_validation": {
+    "size": [
+      1220,
+      13159
+    ],
+    "source_strips": 10,
+    "max_channel_error_after_srgb_normalization": 1,
+    "fixture_background_run_lengths": [
+      622,
+      720,
+      720,
+      720,
+      720,
+      720,
+      720,
+      720,
+      720,
+      720,
+      720,
+      720,
+      720,
+      720,
+      720,
+      720,
+      720,
+      720,
+      297
+    ],
+    "interior_panel_heights_exactly_720": true
+  },
+  "optimized_export_validation": {
+    "size": [
+      1220,
+      17581
+    ],
+    "source_strips": 12,
+    "max_channel_error_after_srgb_normalization": 1,
+    "fixture_background_run_lengths": [
+      622,
+      720,
+      720,
+      720,
+      720,
+      720,
+      720,
+      720,
+      720,
+      720,
+      720,
+      720,
+      720,
+      720,
+      720,
+      720,
+      720,
+      720,
+      720,
+      720,
+      720,
+      720,
+      720,
+      720,
+      399
+    ],
+    "interior_panel_heights_exactly_720": true
+  },
+  "limitations": "Short synthetic page results do not guarantee the same speedup for other pages, image loading conditions, or PNG compression costs."
+}

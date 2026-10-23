@@ -1,0 +1,4 @@
+<resources>
+    <string name="service_description">仅在你按下开始后，对选定的前台窗口截图并向下滚动。图片只存于本机，不读取账号或上传内容。切换应用时自动暂停，可随时停止。</string>
+    <string name="usage_steps">打开想要留存的竖向长页。用「选区」避开标题、页码和底栏，再点「开始」。保持前台阅读页面，随时暂停或结束。</string>
+</resources>
