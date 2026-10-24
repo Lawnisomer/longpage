@@ -8,6 +8,8 @@
 
 构建链是 `aapt2 → javac → jar → d8 → zipalign → apksigner`。Android Studio 可用于安装 SDK，但不是构建前提。当前没有 Gradle 工程；其他操作系统尚未验证。
 
+0.1.4 起最低运行版本为 Android 15 / API 35，资源清单和 DEX 编译使用相同的最低要求；目标及编译 SDK 仍为 API 36。构建时继续安装 Platform 36，无需为了最低运行版本另换编译平台。
+
 ## 标准 SDK 安装布局
 
 ```powershell

@@ -2,7 +2,7 @@
   <img src="docs/assets/longpage-icon.svg" width="112" alt="长页图标：纸页与取景边角">
   <h1>长页 · LongPage</h1>
   <p>打开想要留存的竖向长页。</p>
-  <p>面向 Android 16 的精简长截图工具 · Java 原生界面 · 本地保存 · MIT</p>
+  <p>面向 Android 15 及以上的精简长截图工具 · Java 原生界面 · 本地保存 · MIT</p>
 </div>
 
 [![构建与验证](https://github.com/Lawnisomer/longpage/actions/workflows/ci.yml/badge.svg)](https://github.com/Lawnisomer/longpage/actions/workflows/ci.yml)
@@ -14,7 +14,7 @@
 
 项目从选区、截图、滚动和拼接起步，随后处理了超高图像导出、惯性滚动和采集耗时等问题。这里保留实现思路、验证方法和开发过程，方便继续改进，也方便其他人了解它的能力边界。
 
-**当前版本：0.1.3。** 最低及目标版本均为 Android 16 / API 36；真机验证基于 Redmi K70E。其他设备和系统尚未建立兼容性结论。
+**当前版本：0.1.4。** 最低版本为 Android 15 / API 35，目标及编译版本为 Android 16 / API 36。既有真机验证基于 Redmi K70E、Android 16；Android 15 的新增验证范围见 [验证报告](VALIDATION.md)。其他设备的实际兼容性仍需验证。
 
 ## 能做什么
 
@@ -29,7 +29,7 @@
 
 ## 安装与使用
 
-从本仓库的 [Releases](https://github.com/Lawnisomer/longpage/releases) 下载 APK，在 Android 16 手机上安装。
+从本仓库的 [Releases](https://github.com/Lawnisomer/longpage/releases) 下载 APK。0.1.4 起最低要求 Android 15；旧版 0.1.3 最低要求 Android 16，请留意下载版本。
 
 1. 打开“长页”，点“① 启用截图与滚动服务”，在系统设置中启用对应无障碍服务。
 2. 返回应用，点“② 显示悬浮控制”，然后打开需要截取的竖向页面。
@@ -51,6 +51,7 @@ HyperOS 若提示受限设置，需要由手机使用者在系统应用信息页
 | 用户手动长图测试 | 报告 `1220 × 114284` 完整截图及 PNG 导出成功；会话索引确认 146 帧，原内容未公开 |
 | 速度优化短测 | 同机、同编号页：约 369px/s → 898px/s，吞吐约 2.43 倍；不能外推为所有页面的固定加速比 |
 | 外观 | 桌面、应用信息和快捷设置图标经过真机核对 |
+| Android 15（0.1.4） | MuMu / API 35 上完成安装、服务绑定、选区与短采集；调试包 1079 × 8574、非调试包 1079 × 3276 的 PNG 导出及内容检查通过；尚未验证 Android 15 真机 |
 
 这是一款由单台手机需求起步的早期工具。表中的合成验证、用户反馈和未验证边界分别记录在 [验证报告](VALIDATION.md)，原始汇总数据见 [benchmark.json](docs/benchmark.json)。
 

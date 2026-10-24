@@ -31,7 +31,7 @@ public final class MainActivity extends Activity {
         space(20);text("最近一次任务",18,0xFF14232D);task=text("尚无任务",14,0xFF52636D);
         export=button("导出完整 PNG 到相册",this::exportLatest);open=button("打开已导出的图片",()->{if(exported!=null)try{startActivity(new Intent(Intent.ACTION_VIEW).setDataAndType(exported,"image/png").addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION));}catch(Exception e){Toast.makeText(this,"没有可用的图片查看器",0).show();}});open.setVisibility(View.GONE);
         String savedUri=getPreferences(0).getString("exported",null);if(savedUri!=null){exported=Uri.parse(savedUri);open.setVisibility(View.VISIBLE);}
-        space(16);TextView version=text("适配：Redmi K70E · Android 16\n导出位置：Pictures/LongCapture\n测试版 0.1.3 · 无网络权限、无广告、无统计",12,0xFF75848B);
+        space(16);TextView version=text("系统要求：Android 15 及以上\n导出位置：Pictures/LongCapture\n测试版 0.1.4 · 无网络权限、无广告、无统计",12,0xFF75848B);
         version.setOnLongClickListener(v->{startActivity(new Intent(this,TestPageActivity.class));return true;});
         handleDebugIntent(getIntent());
     }

@@ -65,7 +65,7 @@ try {
     }
     & $aapt2 compile --dir "$stage/app/src/main/res" -o "$output/resources.zip"
     Check-Exit 'Compile resources'
-    & $aapt2 link -o "$output/resources.apk" --manifest "$stage/app/src/main/AndroidManifest.xml" -I $stagedJar --java "$output/generated" --min-sdk-version 36 --target-sdk-version 36 --version-code 4 --version-name '0.1.3' "$output/resources.zip"
+    & $aapt2 link -o "$output/resources.apk" --manifest "$stage/app/src/main/AndroidManifest.xml" -I $stagedJar --java "$output/generated" --min-sdk-version 35 --target-sdk-version 36 --version-code 5 --version-name '0.1.4' "$output/resources.zip"
     Check-Exit 'Link resources'
     $sources = @(Get-ChildItem -LiteralPath "$stage/app/src/main/java", "$output/generated" -Recurse -Filter '*.java' | ForEach-Object FullName)
     $responseFile = Join-Path $output 'javac.args'
@@ -75,7 +75,7 @@ try {
     Check-Exit 'Compile Java'
     & $jar --create --file "$output/classes.jar" -C "$output/classes" .
     Check-Exit 'Package classes'
-    & $java -cp "$BuildTools/lib/d8.jar" com.android.tools.r8.D8 --lib $stagedJar --min-api 36 --output "$output/dex" "$output/classes.jar"
+    & $java -cp "$BuildTools/lib/d8.jar" com.android.tools.r8.D8 --lib $stagedJar --min-api 35 --output "$output/dex" "$output/classes.jar"
     Check-Exit 'DEX'
     Copy-Item -LiteralPath "$output/resources.apk" -Destination "$output/unsigned.apk"
     Add-Type -AssemblyName System.IO.Compression.FileSystem

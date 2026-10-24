@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-24",
+  "version": "0.1.4",
+  "version_code": 5,
+  "environment": {
+    "type": "MuMu emulator",
+    "android_version": "15",
+    "api_level": 35,
+    "abi": "x86_64",
+    "screen_size": [1080, 1920],
+    "fixture": "built-in synthetic numbered panels"
+  },
+  "old_release_install": {
+    "version": "0.1.3",
+    "result": "INSTALL_FAILED_OLDER_SDK",
+    "required_api": 36,
+    "device_api": 35
+  },
+  "build": {
+    "min_sdk": 35,
+    "target_sdk": 36,
+    "compile_sdk": 36,
+    "dex_min_api": 35,
+    "matcher_tests_passed": 7,
+    "signature_verified": true,
+    "same_certificate_as_0_1_3": true,
+    "release_debuggable": false,
+    "release_apk_bytes": 41681,
+    "release_apk_sha256": "7639fc59bb4b85b238fb5816f5ae97c01aeb1cb469b72e44379028294819087f"
+  },
+  "debug_fixture": {
+    "size": [1079, 8574],
+    "source_strips": 9,
+    "export_bytes": 292138,
+    "max_channel_error_against_source_strips": 0,
+    "interior_complete_panels": 10,
+    "interior_panel_heights_exactly_720": true,
+    "paused_frame_count_before": 5,
+    "paused_frame_count_after": 5,
+    "resume_appended_content": true
+  },
+  "release_update": {
+    "installed_over_debug_build": true,
+    "recent_task_preserved": true,
+    "export_record_preserved": true,
+    "selected_region_preserved": true,
+    "accessibility_service_enabled_and_bound": true,
+    "run_as_rejected_as_non_debuggable": true
+  },
+  "release_fixture": {
+    "size": [1079, 3276],
+    "source_strips_from_app_ui": 3,
+    "export_bytes": 110428,
+    "interior_complete_panels": 3,
+    "interior_panel_heights_exactly_720": true,
+    "max_channel_error_against_debug_fixture_prefix": 0,
+    "normal_overlay_start_pause_end": true,
+    "export_from_main_ui": true
+  },
+  "limitations": [
+    "Android 15 emulator validation is not a Xiaomi 13 or HyperOS physical-device compatibility result.",
+    "No ultra-long capture or third-party application testing was performed in this validation.",
+    "Capture source-strip comparison used a debuggable build; the non-debuggable build was checked against the matching synthetic reference prefix."
+  ]
+}
