@@ -36,7 +36,7 @@ $env:ANDROID_HOME = 'C:\Android\Sdk'
 
 | 参数 | 用途 |
 | --- | --- |
-| `-Test` | 构建前运行 7 项匹配测试 |
+| `-Test` | 构建前运行 36 项匹配与稳定性检查 |
 | `-Release` | 将打包后的 `debuggable` 设为 false |
 | `-Install` | 用 ADB 覆盖安装到一台已授权的 USB 手机 |
 | `-AdbPath` | 指定独立 ADB 可执行文件 |

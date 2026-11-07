@@ -65,7 +65,7 @@ try {
     }
     & $aapt2 compile --dir "$stage/app/src/main/res" -o "$output/resources.zip"
     Check-Exit 'Compile resources'
-    & $aapt2 link -o "$output/resources.apk" --manifest "$stage/app/src/main/AndroidManifest.xml" -I $stagedJar --java "$output/generated" --min-sdk-version 35 --target-sdk-version 36 --version-code 5 --version-name '0.1.4' "$output/resources.zip"
+    & $aapt2 link -o "$output/resources.apk" --manifest "$stage/app/src/main/AndroidManifest.xml" -I $stagedJar --java "$output/generated" --min-sdk-version 35 --target-sdk-version 36 --version-code 7 --version-name '0.1.6' "$output/resources.zip"
     Check-Exit 'Link resources'
     $sources = @(Get-ChildItem -LiteralPath "$stage/app/src/main/java", "$output/generated" -Recurse -Filter '*.java' | ForEach-Object FullName)
     $responseFile = Join-Path $output 'javac.args'

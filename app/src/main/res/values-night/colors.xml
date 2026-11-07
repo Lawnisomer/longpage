@@ -1,0 +1,14 @@
+<resources>
+    <color name="app_background">#101416</color>
+    <color name="app_surface">#1B2226</color>
+    <color name="app_text">#EDF2F4</color>
+    <color name="app_secondary">#B8C3CA</color>
+    <color name="app_muted">#9AA8B1</color>
+    <color name="app_accent">#A1DEC8</color>
+    <color name="app_on_accent">#11392D</color>
+    <color name="app_outline">#354249</color>
+    <color name="app_accent_surface">#263C34</color>
+    <color name="app_disabled_surface">#293238</color>
+    <color name="app_disabled_text">#8B989F</color>
+    <color name="app_ripple">#3397DEC5</color>
+</resources>
